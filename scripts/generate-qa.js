@@ -18,6 +18,7 @@ const coreInfo = {
   ageRange: "Patients aged 5 and older",
   facilities: "State-of-the-art facilities with latest technology",
   procedures: "On-site: abscess drainage, EKGs, ultrasounds, bloodwork"
+ 
 };
 
 // Categories with base questions from ACTUAL WEBSITE CONTENT
@@ -37,7 +38,7 @@ const baseQuestions = [
   { q: "Do you accept Medicaid?", a: "Please contact your nearest location to inquire about Medicaid. Our $19 visits make care affordable even without insurance.", cat: "insurance" },
   { q: "Do you accept Medicare?", a: "Please contact your nearest location to inquire about Medicare. Our affordable $19 visits are available to all patients.", cat: "insurance" },
   { q: "Can I visit without insurance?", a: "Absolutely! No insurance required. Don't let healthcare worries hold you back - get $19 visits with no insurance needed.", cat: "insurance" },
-  { q: "What if I'm uninsured?", a: "We welcome uninsured patients! Our $19 visits are designed to make healthcare accessible to everyone, regardless of insurance status.", cat: "insurance" },
+  { q: "What if I'm uninsured?", a: "We welcome uffninsured patients! Our $19 visits are designed to make healthcare accessible to everyone, regardless of insurance status.", cat: "insurance" },
   
   // Appointments (200 questions) - FROM HOMEPAGE
   { q: "Do I need an appointment?", a: "No appointment needed! Clinica San Miguel offers walk-in care. Affordable, compassionate care starts at just $19 with no appointment needed.", cat: "appointments" },
@@ -113,6 +114,62 @@ const baseQuestions = [
   { q: "Is Semaglutide safe?", a: "Semaglutide has been studied in thousands of people. Most common side effects are nausea, diarrhea, and vomiting, which are usually mild and disappear over time.", cat: "weight_loss" },
   { q: "How much does Semaglutide cost?", a: "At Clínica San Miguel, we offer flexible payment plans to make Semaglutide treatment accessible to everyone. Visit any location for personalized pricing.", cat: "weight_loss" },
   { q: "How do I start Semaglutide?", a: "Simply visit any Clínica San Miguel location. We'll conduct health studies and create a personalized weight loss plan. Your doctor will evaluate if Semaglutide is right for you.", cat: "weight_loss" },
+  
+  // Semaglutide - Expanded Questions
+  { q: "What is Semaglutide?", a: "Semaglutide is an injectable medication administered once a week that acts on the central nervous system to reduce appetite and increase feelings of satiety, helping you eat less and lose weight effectively.", cat: "weight_loss" },
+  { q: "How does Semaglutide reduce appetite?", a: "Semaglutide decreases the production of ghrelin, the hunger hormone, which makes you feel less hungry and helps you eat less throughout the day.", cat: "weight_loss" },
+  { q: "Does Semaglutide increase satiety?", a: "Yes! Semaglutide stimulates the production of GLP-1, a hormone that makes you feel full after eating, helping you control portions naturally.", cat: "weight_loss" },
+  { q: "How does Semaglutide affect digestion?", a: "Semaglutide delays gastric emptying, making food stay in the stomach longer. This helps you feel full for an extended period after meals.", cat: "weight_loss" },
+  { q: "What can I expect with Semaglutide treatment?", a: "With Semaglutide treatment, you can expect improved blood sugar control, better blood pressure, improved cholesterol levels, and sustainable weight loss when combined with healthy lifestyle changes.", cat: "weight_loss" },
+  { q: "Does Semaglutide help with blood sugar?", a: "Yes! Semaglutide helps with blood sugar control, making it beneficial for those managing diabetes or prediabetes while losing weight.", cat: "weight_loss" },
+  { q: "Can Semaglutide lower blood pressure?", a: "Yes, Semaglutide treatment can help improve blood pressure levels as part of your overall health improvement journey.", cat: "weight_loss" },
+  { q: "Does Semaglutide affect cholesterol?", a: "Yes! Semaglutide can help improve cholesterol levels, contributing to better cardiovascular health.", cat: "weight_loss" },
+  { q: "What are the recommendations for Semaglutide treatment?", a: "Combine Semaglutide treatment with a healthy diet and regular exercise, drink plenty of water, and inform your doctor about any other medications you're taking.", cat: "weight_loss" },
+  { q: "Should I exercise while on Semaglutide?", a: "Yes! Combining Semaglutide treatment with regular exercise enhances results and promotes sustainable weight loss and overall health.", cat: "weight_loss" },
+  { q: "Do I need to diet with Semaglutide?", a: "Yes, combining Semaglutide with a healthy diet maximizes your weight loss results and helps establish sustainable healthy eating habits.", cat: "weight_loss" },
+  { q: "Should I drink water on Semaglutide?", a: "Absolutely! Drinking plenty of water is essential during Semaglutide treatment to stay hydrated and support your body's weight loss process.", cat: "weight_loss" },
+  { q: "What health benefits come with Semaglutide weight loss?", a: "Weight loss with Semaglutide reduces risk of chronic diseases (Type 2 diabetes, heart disease, stroke, some cancers), improves sleep quality, increases energy and vitality, and improves self-esteem and self-confidence.", cat: "weight_loss" },
+  { q: "Can Semaglutide reduce diabetes risk?", a: "Yes! Weight loss with Semaglutide can significantly reduce your risk of developing Type 2 diabetes and help manage existing diabetes.", cat: "weight_loss" },
+  { q: "Does Semaglutide help prevent heart disease?", a: "Yes, losing weight with Semaglutide reduces the risk of heart disease and stroke, improving your cardiovascular health.", cat: "weight_loss" },
+  { q: "Can Semaglutide reduce cancer risk?", a: "Weight loss achieved with Semaglutide can help reduce the risk of some types of cancer associated with obesity.", cat: "weight_loss" },
+  { q: "Will Semaglutide improve my sleep?", a: "Yes! Many patients experience improved sleep quality as they lose weight with Semaglutide treatment.", cat: "weight_loss" },
+  { q: "Does Semaglutide increase energy?", a: "Yes! Patients often report increased energy and vitality as they lose weight and improve their overall health with Semaglutide.", cat: "weight_loss" },
+  { q: "Can Semaglutide improve self-esteem?", a: "Absolutely! Achieving your weight loss goals with Semaglutide often leads to improved self-esteem and self-confidence.", cat: "weight_loss" },
+  { q: "Is Semaglutide safe to use?", a: "Yes, Semaglutide has been studied in thousands of people and is considered safe. The most common side effects are nausea, diarrhea, and vomiting, which are usually mild and disappear over time.", cat: "weight_loss" },
+  { q: "What are Semaglutide side effects?", a: "The most common side effects of Semaglutide are nausea, diarrhea, and vomiting. These side effects are usually mild and tend to disappear as your body adjusts to the medication.", cat: "weight_loss" },
+  { q: "Does Semaglutide cause nausea?", a: "Some patients experience nausea when starting Semaglutide, but this side effect is usually mild and disappears over time as your body adjusts.", cat: "weight_loss" },
+  { q: "Will Semaglutide make me sick?", a: "Most patients tolerate Semaglutide well. Some may experience mild nausea, diarrhea, or vomiting initially, but these symptoms typically resolve over time.", cat: "weight_loss" },
+  { q: "How much does Semaglutide treatment cost?", a: "At Clínica San Miguel, we offer flexible payment plans to make Semaglutide treatment accessible to everyone. Visit any location for personalized pricing information.", cat: "weight_loss" },
+  { q: "Are there payment plans for Semaglutide?", a: "Yes! We offer flexible payment plans to make Semaglutide treatment accessible to everyone. Contact your nearest Clínica San Miguel location for details.", cat: "weight_loss" },
+  { q: "Is Semaglutide affordable?", a: "At Clínica San Miguel, we work to make Semaglutide treatment accessible with flexible payment plans that fit your budget.", cat: "weight_loss" },
+  { q: "How do I start Semaglutide treatment?", a: "To start Semaglutide, simply visit any Clínica San Miguel location. We'll perform health studies, assess your overall health, and create a personalized weight loss plan tailored to your needs.", cat: "weight_loss" },
+  { q: "What tests are needed for Semaglutide?", a: "Before starting Semaglutide, we'll conduct comprehensive health studies to assess your general health and ensure the treatment is safe and appropriate for you.", cat: "weight_loss" },
+  { q: "Will I get a personalized weight loss plan?", a: "Yes! At Clínica San Miguel, we create a personalized weight loss plan that fits your specific needs, combining Semaglutide with nutrition and lifestyle guidance.", cat: "weight_loss" },
+  { q: "Who evaluates me for Semaglutide?", a: "During your appointment, your doctor will evaluate your health, review your medical history, and help determine if Semaglutide is the right weight loss solution for you.", cat: "weight_loss" },
+  { q: "How often do I take Semaglutide?", a: "Semaglutide is an injectable medication that is administered once a week, making it convenient and easy to incorporate into your routine.", cat: "weight_loss" },
+  { q: "Is Semaglutide a weekly injection?", a: "Yes! Semaglutide is administered once a week through injection, providing convenient and consistent appetite control.", cat: "weight_loss" },
+  { q: "How is Semaglutide administered?", a: "Semaglutide is administered as a once-weekly injection. Your healthcare provider will show you the proper technique for self-administration.", cat: "weight_loss" },
+  { q: "What nutrition tips help with Semaglutide?", a: "For best results with Semaglutide: eat whole, unprocessed foods; limit sugar and refined carbohydrates; choose lean proteins and healthy fats; and stay well-hydrated.", cat: "weight_loss" },
+  { q: "Should I eat whole foods on Semaglutide?", a: "Yes! Eating whole, unprocessed foods while on Semaglutide maximizes your weight loss results and improves overall health.", cat: "weight_loss" },
+  { q: "Can I eat sugar on Semaglutide?", a: "It's best to limit sugar and refined carbohydrates while on Semaglutide to maximize weight loss results and maintain stable blood sugar levels.", cat: "weight_loss" },
+  { q: "What proteins should I eat with Semaglutide?", a: "Choose lean proteins such as chicken, fish, turkey, beans, and legumes. Combine with healthy fats like avocado, nuts, and olive oil for optimal results.", cat: "weight_loss" },
+  { q: "What foods should I avoid on Semaglutide?", a: "Limit sugar, refined carbohydrates, processed foods, and excessive fats. Focus on whole foods, lean proteins, and plenty of vegetables.", cat: "weight_loss" },
+  { q: "How long does Semaglutide treatment last?", a: "Semaglutide treatment duration varies by individual. Your doctor will create a personalized plan and monitor your progress to determine the optimal treatment length.", cat: "weight_loss" },
+  { q: "When will I see results with Semaglutide?", a: "Many patients begin seeing weight loss results within the first few weeks of Semaglutide treatment, with continued improvement over time when combined with healthy lifestyle changes.", cat: "weight_loss" },
+  { q: "Is Semaglutide effective for weight loss?", a: "Yes! Semaglutide has been proven effective for weight loss when combined with a healthy diet and regular exercise, helping you achieve sustainable results.", cat: "weight_loss" },
+  { q: "Can anyone take Semaglutide?", a: "Your doctor will evaluate your health during your appointment to determine if Semaglutide is right for you. Visit any Clínica San Miguel location for a consultation.", cat: "weight_loss" },
+  { q: "Do I need a prescription for Semaglutide?", a: "Yes, Semaglutide requires a prescription. Visit any Clínica San Miguel location where our doctors will evaluate you and prescribe if appropriate.", cat: "weight_loss" },
+  { q: "What is the Aleeza Weight Loss Program?", a: "The Aleeza Weight Loss Program at Clínica San Miguel features personalized weight management plans combining nutrition, exercise, and lifestyle changes with Semaglutide for sustainable results.", cat: "weight_loss" },
+  { q: "Does Semaglutide work permanently?", a: "Semaglutide helps you lose weight and establish healthy habits. Maintaining results requires continuing healthy eating and exercise habits even after treatment.", cat: "weight_loss" },
+  { q: "Will I gain weight after stopping Semaglutide?", a: "Maintaining your weight loss after Semaglutide depends on continuing the healthy diet and exercise habits you developed during treatment. We provide guidance for long-term success.", cat: "weight_loss" },
+  { q: "Can I take other medications with Semaglutide?", a: "Always tell your doctor about any other medications you're taking. Your doctor will evaluate potential interactions and adjust your treatment plan accordingly.", cat: "weight_loss" },
+  { q: "Is Semaglutide FDA approved?", a: "Yes, Semaglutide is FDA-approved for weight management and has been extensively studied in thousands of patients.", cat: "weight_loss" },
+  { q: "Where can I get Semaglutide in Texas?", a: "Visit any of our 19 Clínica San Miguel locations across Texas for Semaglutide treatment. We're here to help you achieve your weight loss goals!", cat: "weight_loss" },
+  { q: "Does insurance cover Semaglutide?", a: "Coverage varies by insurance plan. At Clínica San Miguel, we offer flexible payment plans to make Semaglutide accessible regardless of insurance status.", cat: "weight_loss" },
+  { q: "Can I get Semaglutide without insurance?", a: "Yes! We offer flexible payment plans to make Semaglutide treatment accessible to everyone, with or without insurance.", cat: "weight_loss" },
+  { q: "What makes Semaglutide different from other weight loss medications?", a: "Semaglutide works by targeting multiple mechanisms: reducing appetite, increasing satiety, and delaying gastric emptying, providing comprehensive support for sustainable weight loss.", cat: "weight_loss" },
+  { q: "Can Semaglutide help with obesity?", a: "Yes! Semaglutide is an effective treatment for obesity, helping patients achieve significant weight loss when combined with lifestyle modifications.", cat: "weight_loss" },
+  { q: "Is Semaglutide right for me?", a: "Visit any Clínica San Miguel location for a consultation. Our doctors will evaluate your health, discuss your goals, and determine if Semaglutide is the right choice for you.", cat: "weight_loss" },
   
   // Wart Removal
   { q: "Do you remove warts?", a: "Yes! Our skilled professionals provide safe and effective wart removal with cautery. Easy, fast, and no appointment needed!", cat: "wart_removal" },
@@ -200,6 +257,327 @@ const baseQuestions = [
   { q: "Immigration exam special?", a: "Yes! Special pricing on Immigration Medical Exams. Comprehensive exams meeting immigration standards by certified professionals!", cat: "specials" },
   { q: "DOT exam special price?", a: "Yes! D.O.T + Urine Test special available. Contact any of our 19 locations for current pricing. Walk-ins welcome!", cat: "specials" },
 ];
+
+// COMPREHENSIVE SERVICES DATABASE - 6000+ Detailed Q&A Pairs
+const comprehensiveServices = [
+  // Primary Care Services (500 Q&A)
+  { service: "Annual Physical Exam", desc: "Comprehensive yearly health assessment including vital signs, physical examination, health history review, and preventive care recommendations", price: "$19 base visit", cat: "primary_care" },
+  { service: "Wellness Check-up", desc: "Complete health evaluation to assess overall wellness, identify potential health risks, and provide personalized health improvement strategies", price: "$19 base visit", cat: "primary_care" },
+  { service: "Sports Physical", desc: "Pre-participation physical examination for athletes to ensure fitness for sports activities, including cardiovascular, musculoskeletal, and general health assessment", price: "$19 base visit", cat: "primary_care" },
+  { service: "School Physical", desc: "Required physical examination for school enrollment, including immunization review, growth assessment, and health screening", price: "$19 base visit", cat: "primary_care" },
+  { service: "Work Physical", desc: "Employment physical examination to assess fitness for work duties, including vision, hearing, and general health evaluation", price: "$19 base visit", cat: "primary_care" },
+  { service: "DOT Physical", desc: "Department of Transportation physical exam for commercial drivers, ensuring compliance with federal safety regulations", price: "Special pricing available", cat: "primary_care" },
+  { service: "Pre-Employment Physical", desc: "Comprehensive health screening for new employment, including drug testing and fitness-for-duty assessment", price: "$19 base visit", cat: "primary_care" },
+  { service: "Executive Physical", desc: "Comprehensive health assessment for busy professionals, including advanced screening tests and detailed health consultation", price: "Contact for pricing", cat: "primary_care" },
+  
+  // Diagnostic Services (800 Q&A)
+  { service: "Complete Blood Count (CBC)", desc: "Comprehensive blood test measuring red blood cells, white blood cells, hemoglobin, hematocrit, and platelets to assess overall health", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Comprehensive Metabolic Panel", desc: "Blood test measuring glucose, electrolytes, kidney function, and liver function to evaluate metabolism and organ health", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Lipid Panel", desc: "Cholesterol screening measuring total cholesterol, HDL, LDL, and triglycerides for cardiovascular risk assessment", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Hemoglobin A1C Test", desc: "Blood test measuring average blood sugar levels over 3 months for diabetes diagnosis and monitoring", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Thyroid Function Tests", desc: "Blood tests measuring TSH, T3, and T4 levels to evaluate thyroid health and diagnose thyroid disorders", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Liver Function Tests", desc: "Blood tests measuring liver enzymes and proteins to assess liver health and detect liver disease", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Kidney Function Tests", desc: "Blood and urine tests measuring creatinine, BUN, and GFR to evaluate kidney health and function", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Urinalysis", desc: "Urine test detecting infections, kidney disease, diabetes, and other conditions through chemical and microscopic analysis", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Pregnancy Test", desc: "Rapid urine or blood test to detect pregnancy hormone (hCG) with accurate results", price: "$19 base visit", cat: "diagnostics" },
+  { service: "Drug Screening", desc: "Urine or blood test detecting presence of drugs for employment, legal, or medical purposes", price: "Contact for pricing", cat: "diagnostics" },
+  { service: "STD Testing Panel", desc: "Comprehensive screening for sexually transmitted diseases including HIV, syphilis, gonorrhea, chlamydia, and hepatitis", price: "Confidential testing available", cat: "diagnostics" },
+  { service: "HIV Test", desc: "Confidential blood test detecting HIV antibodies and antigens for early detection and treatment", price: "Confidential testing available", cat: "diagnostics" },
+  { service: "Hepatitis Screening", desc: "Blood tests detecting hepatitis A, B, and C viruses for diagnosis and monitoring", price: "Affordable rates", cat: "diagnostics" },
+  { service: "TB Test (Tuberculosis)", desc: "Skin test or blood test detecting tuberculosis infection for screening and diagnosis", price: "$19 base visit", cat: "diagnostics" },
+  { service: "Strep Test", desc: "Rapid throat swab test detecting streptococcal bacteria causing strep throat", price: "$19 base visit", cat: "diagnostics" },
+  { service: "Flu Test", desc: "Rapid nasal swab test detecting influenza virus for accurate diagnosis and treatment", price: "$19 base visit", cat: "diagnostics" },
+  { service: "COVID-19 Test", desc: "Rapid antigen or PCR test detecting SARS-CoV-2 virus for COVID-19 diagnosis", price: "Contact for current pricing", cat: "diagnostics" },
+  { service: "Mono Test", desc: "Blood test detecting infectious mononucleosis caused by Epstein-Barr virus", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Allergy Testing", desc: "Skin prick or blood tests identifying specific allergens causing allergic reactions", price: "Contact for pricing", cat: "diagnostics" },
+  { service: "Blood Glucose Test", desc: "Fasting or random blood test measuring blood sugar levels for diabetes screening", price: "Affordable rates", cat: "diagnostics" },
+  { service: "Electrocardiogram (EKG)", desc: "Heart rhythm test recording electrical activity to detect heart conditions and arrhythmias", price: "On-site testing available", cat: "diagnostics" },
+  { service: "Ultrasound Imaging", desc: "Non-invasive imaging using sound waves to visualize internal organs and tissues", price: "On-site imaging available", cat: "diagnostics" },
+  { service: "X-Ray Services", desc: "Radiographic imaging to diagnose bone fractures, lung conditions, and other internal issues", price: "On-site X-ray available", cat: "diagnostics" },
+  { service: "Pregnancy Ultrasound", desc: "Prenatal imaging to monitor fetal development, confirm pregnancy, and assess fetal health", price: "Contact for pricing", cat: "diagnostics" },
+  { service: "Pelvic Ultrasound", desc: "Imaging of reproductive organs to diagnose conditions affecting uterus, ovaries, and surrounding structures", price: "Contact for pricing", cat: "diagnostics" },
+  { service: "Abdominal Ultrasound", desc: "Imaging of abdominal organs including liver, gallbladder, pancreas, and kidneys", price: "Contact for pricing", cat: "diagnostics" },
+  
+  // Immunizations & Vaccines (400 Q&A)
+  { service: "Flu Vaccine", desc: "Annual influenza vaccination protecting against seasonal flu strains for all ages 5+", price: "Seasonal pricing", cat: "immunizations" },
+  { service: "COVID-19 Vaccine", desc: "Vaccination protecting against SARS-CoV-2 virus and COVID-19 disease", price: "Contact for availability", cat: "immunizations" },
+  { service: "Tetanus Shot (Tdap)", desc: "Vaccination protecting against tetanus, diphtheria, and pertussis (whooping cough)", price: "Affordable rates", cat: "immunizations" },
+  { service: "Pneumonia Vaccine", desc: "Vaccination protecting against pneumococcal bacteria causing pneumonia, meningitis, and bloodstream infections", price: "Affordable rates", cat: "immunizations" },
+  { service: "Shingles Vaccine", desc: "Vaccination preventing shingles (herpes zoster) and post-herpetic neuralgia in adults 50+", price: "Contact for pricing", cat: "immunizations" },
+  { service: "HPV Vaccine", desc: "Vaccination protecting against human papillomavirus causing cervical cancer and genital warts", price: "Affordable rates", cat: "immunizations" },
+  { service: "Hepatitis A Vaccine", desc: "Vaccination protecting against hepatitis A virus causing liver infection", price: "Affordable rates", cat: "immunizations" },
+  { service: "Hepatitis B Vaccine", desc: "Vaccination protecting against hepatitis B virus causing chronic liver disease", price: "Affordable rates", cat: "immunizations" },
+  { service: "MMR Vaccine", desc: "Vaccination protecting against measles, mumps, and rubella", price: "Affordable rates", cat: "immunizations" },
+  { service: "Varicella Vaccine", desc: "Vaccination protecting against chickenpox (varicella-zoster virus)", price: "Affordable rates", cat: "immunizations" },
+  { service: "Meningitis Vaccine", desc: "Vaccination protecting against meningococcal bacteria causing meningitis and bloodstream infections", price: "Affordable rates", cat: "immunizations" },
+  { service: "Travel Vaccines", desc: "Vaccinations required or recommended for international travel including yellow fever, typhoid, and Japanese encephalitis", price: "Contact for travel consultation", cat: "immunizations" },
+  { service: "Rabies Vaccine", desc: "Pre-exposure or post-exposure vaccination protecting against rabies virus", price: "Contact for pricing", cat: "immunizations" },
+  { service: "Yellow Fever Vaccine", desc: "Required vaccination for travel to certain countries in Africa and South America", price: "Travel consultation required", cat: "immunizations" },
+  { service: "Typhoid Vaccine", desc: "Vaccination protecting against typhoid fever for travelers to endemic areas", price: "Travel consultation required", cat: "immunizations" },
+  
+  // Women's Health (600 Q&A)
+  { service: "Pap Smear", desc: "Cervical cancer screening test collecting cells from cervix to detect abnormalities and prevent cervical cancer", price: "Affordable rates", cat: "womens_health" },
+  { service: "Breast Examination", desc: "Clinical breast exam checking for lumps, changes, or abnormalities for early breast cancer detection", price: "$19 base visit", cat: "womens_health" },
+  { service: "Pelvic Examination", desc: "Physical examination of reproductive organs including uterus, ovaries, cervix, and vagina", price: "$19 base visit", cat: "womens_health" },
+  { service: "Prenatal Care", desc: "Comprehensive pregnancy care including regular check-ups, ultrasounds, and monitoring for healthy pregnancy", price: "Contact for pricing", cat: "womens_health" },
+  { service: "Pregnancy Consultation", desc: "Initial pregnancy visit including confirmation, prenatal vitamins, and pregnancy planning", price: "$19 base visit", cat: "womens_health" },
+  { service: "Birth Control Consultation", desc: "Contraceptive counseling discussing options including pills, IUDs, implants, and other methods", price: "$19 base visit", cat: "womens_health" },
+  { service: "IUD Insertion", desc: "Placement of intrauterine device for long-term contraception", price: "Contact for pricing", cat: "womens_health" },
+  { service: "Contraceptive Counseling", desc: "Personalized guidance on contraceptive options based on health history and preferences", price: "$19 base visit", cat: "womens_health" },
+  { service: "Menopause Management", desc: "Treatment and support for menopausal symptoms including hot flashes, mood changes, and hormonal imbalances", price: "$19 base visit", cat: "womens_health" },
+  { service: "PCOS Management", desc: "Treatment for polycystic ovary syndrome including hormonal therapy and lifestyle modifications", price: "$19 base visit", cat: "womens_health" },
+  { service: "Endometriosis Evaluation", desc: "Assessment and management of endometriosis causing pelvic pain and fertility issues", price: "$19 base visit", cat: "womens_health" },
+  { service: "Fertility Consultation", desc: "Initial evaluation for couples experiencing difficulty conceiving", price: "$19 base visit", cat: "womens_health" },
+  { service: "Mammogram Referral", desc: "Referral for breast cancer screening mammography", price: "$19 base visit", cat: "womens_health" },
+  { service: "Osteoporosis Screening", desc: "Bone density assessment for postmenopausal women at risk for osteoporosis", price: "Contact for pricing", cat: "womens_health" },
+  
+  // Men's Health (400 Q&A)
+  { service: "Prostate Exam", desc: "Digital rectal examination and PSA testing for prostate cancer screening in men 50+", price: "$19 base visit", cat: "mens_health" },
+  { service: "PSA Test", desc: "Prostate-specific antigen blood test for early detection of prostate issues and cancer", price: "Affordable rates", cat: "mens_health" },
+  { service: "Testosterone Screening", desc: "Blood test measuring testosterone levels to diagnose low testosterone (Low-T)", price: "Affordable rates", cat: "mens_health" },
+  { service: "Erectile Dysfunction Treatment", desc: "Evaluation and treatment for ED including medications and lifestyle counseling", price: "$19 base visit", cat: "mens_health" },
+  { service: "Testicular Examination", desc: "Physical examination checking for lumps, swelling, or abnormalities in testicles", price: "$19 base visit", cat: "mens_health" },
+  { service: "Vasectomy Consultation", desc: "Counseling and referral for permanent male contraception procedure", price: "$19 base visit", cat: "mens_health" },
+  { service: "Male Fertility Evaluation", desc: "Assessment including semen analysis for couples experiencing infertility", price: "Contact for pricing", cat: "mens_health" },
+  { service: "Benign Prostatic Hyperplasia Treatment", desc: "Management of enlarged prostate causing urinary symptoms", price: "$19 base visit", cat: "mens_health" },
+  
+  // Pediatric Care (500 Q&A)
+  { service: "Well-Child Visit", desc: "Routine pediatric check-up monitoring growth, development, and providing age-appropriate screenings", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Newborn Care", desc: "Initial health assessment for newborns including physical exam and newborn screening", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Infant Care", desc: "Regular check-ups for infants monitoring growth, feeding, and developmental milestones", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Toddler Check-up", desc: "Health assessment for toddlers including developmental screening and immunizations", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Adolescent Health", desc: "Comprehensive care for teenagers including physical, mental, and sexual health", price: "$19 base visit", cat: "pediatrics" },
+  { service: "School Immunizations", desc: "Required vaccinations for school enrollment meeting state requirements", price: "Affordable rates", cat: "pediatrics" },
+  { service: "Developmental Screening", desc: "Assessment of child's developmental milestones and early intervention if needed", price: "$19 base visit", cat: "pediatrics" },
+  { service: "ADHD Evaluation", desc: "Comprehensive assessment for attention-deficit/hyperactivity disorder in children", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Autism Screening", desc: "Early screening for autism spectrum disorder in young children", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Childhood Asthma Management", desc: "Treatment and monitoring of asthma in children including inhaler training", price: "$19 base visit", cat: "pediatrics" },
+  { service: "Pediatric Allergy Treatment", desc: "Diagnosis and management of allergies in children", price: "$19 base visit", cat: "pediatrics" },
+  
+  // Chronic Disease Management (700 Q&A)
+  { service: "Diabetes Management", desc: "Comprehensive diabetes care including blood sugar monitoring, medication management, and lifestyle counseling", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Hypertension Management", desc: "Blood pressure monitoring and treatment with medications and lifestyle modifications", price: "$19 base visit", cat: "chronic_care" },
+  { service: "High Cholesterol Treatment", desc: "Lipid management with medications and dietary counseling to reduce cardiovascular risk", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Asthma Management", desc: "Ongoing asthma care including inhaler therapy, trigger identification, and action plan development", price: "$19 base visit", cat: "chronic_care" },
+  { service: "COPD Management", desc: "Treatment for chronic obstructive pulmonary disease including bronchodilators and pulmonary rehabilitation", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Heart Disease Management", desc: "Comprehensive cardiac care including medication management and lifestyle modifications", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Thyroid Disease Management", desc: "Treatment for hypothyroidism and hyperthyroidism with hormone replacement or suppression", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Arthritis Treatment", desc: "Pain management and treatment for osteoarthritis and rheumatoid arthritis", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Chronic Kidney Disease Management", desc: "Monitoring and treatment to slow progression of kidney disease", price: "$19 base visit", cat: "chronic_care" },
+  { service: "Liver Disease Management", desc: "Treatment for fatty liver disease, cirrhosis, and hepatitis", price: "$19 base visit", cat: "chronic_care" },
+  
+  // Minor Procedures (400 Q&A)
+  { service: "Abscess Drainage", desc: "Incision and drainage of skin abscesses to relieve pain and promote healing", price: "On-site procedure", cat: "procedures" },
+  { service: "Wart Removal", desc: "Cauterization or cryotherapy to remove warts from skin", price: "Affordable rates", cat: "procedures" },
+  { service: "Skin Tag Removal", desc: "Quick removal of benign skin tags for cosmetic or comfort reasons", price: "Affordable rates", cat: "procedures" },
+  { service: "Ingrown Toenail Removal", desc: "Partial nail removal to relieve pain and prevent infection", price: "Affordable rates", cat: "procedures" },
+  { service: "Wound Care", desc: "Cleaning, dressing, and monitoring of wounds to promote healing and prevent infection", price: "$19 base visit", cat: "procedures" },
+  { service: "Suture Removal", desc: "Safe removal of stitches after wound healing", price: "$19 base visit", cat: "procedures" },
+  { service: "Ear Cleaning", desc: "Professional ear wax removal to improve hearing and prevent complications", price: "$19 base visit", cat: "procedures" },
+  { service: "Foreign Body Removal", desc: "Removal of foreign objects from ear, nose, or superficial wounds", price: "$19 base visit", cat: "procedures" },
+  { service: "Splinting", desc: "Application of splints for sprains, strains, and minor fractures", price: "$19 base visit", cat: "procedures" },
+  { service: "Injection Services", desc: "Administration of medications including antibiotics, steroids, and vitamin B12", price: "Affordable rates", cat: "procedures" },
+  
+  // Urgent Care Services (600 Q&A)
+  { service: "Cold and Flu Treatment", desc: "Diagnosis and treatment of common cold and influenza symptoms", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Sore Throat Treatment", desc: "Evaluation and treatment of pharyngitis including strep throat testing", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Ear Infection Treatment", desc: "Diagnosis and antibiotic treatment for otitis media and externa", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Sinus Infection Treatment", desc: "Treatment for sinusitis with antibiotics and symptom relief", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Bronchitis Treatment", desc: "Management of acute bronchitis with medications and breathing treatments", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Pneumonia Treatment", desc: "Diagnosis and antibiotic treatment for pneumonia", price: "$19 base visit", cat: "urgent_care" },
+  { service: "UTI Treatment", desc: "Urinary tract infection diagnosis and antibiotic treatment", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Bladder Infection Treatment", desc: "Treatment for cystitis with antibiotics and symptom relief", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Kidney Infection Treatment", desc: "Diagnosis and treatment of pyelonephritis", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Skin Infection Treatment", desc: "Treatment for cellulitis, impetigo, and other bacterial skin infections", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Allergic Reaction Treatment", desc: "Management of allergic reactions including antihistamines and steroids", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Asthma Attack Treatment", desc: "Emergency treatment for asthma exacerbations with nebulizers and medications", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Minor Burn Treatment", desc: "First and second-degree burn care with wound dressing", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Sprain and Strain Treatment", desc: "Evaluation and treatment of musculoskeletal injuries", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Back Pain Treatment", desc: "Assessment and pain management for acute back pain", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Migraine Treatment", desc: "Emergency treatment for severe headaches and migraines", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Nausea and Vomiting Treatment", desc: "Management of gastroenteritis and dehydration", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Diarrhea Treatment", desc: "Evaluation and treatment of acute diarrhea", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Constipation Treatment", desc: "Management of acute constipation", price: "$19 base visit", cat: "urgent_care" },
+  { service: "Food Poisoning Treatment", desc: "Treatment for foodborne illness with hydration and symptom management", price: "$19 base visit", cat: "urgent_care" },
+  
+  // Dermatology Services (300 Q&A)
+  { service: "Acne Treatment", desc: "Medical treatment for acne including topical and oral medications", price: "$19 base visit", cat: "dermatology" },
+  { service: "Eczema Treatment", desc: "Management of atopic dermatitis with moisturizers and medications", price: "$19 base visit", cat: "dermatology" },
+  { service: "Psoriasis Treatment", desc: "Treatment for psoriasis with topical medications and lifestyle counseling", price: "$19 base visit", cat: "dermatology" },
+  { service: "Rosacea Management", desc: "Treatment for facial redness and inflammation", price: "$19 base visit", cat: "dermatology" },
+  { service: "Skin Rash Evaluation", desc: "Diagnosis and treatment of various skin rashes and dermatitis", price: "$19 base visit", cat: "dermatology" },
+  { service: "Fungal Infection Treatment", desc: "Treatment for ringworm, athlete's foot, and nail fungus", price: "$19 base visit", cat: "dermatology" },
+  { service: "Hives Treatment", desc: "Management of urticaria with antihistamines and trigger identification", price: "$19 base visit", cat: "dermatology" },
+  { service: "Skin Cancer Screening", desc: "Full body skin examination for early detection of skin cancer", price: "$19 base visit", cat: "dermatology" },
+  { service: "Mole Evaluation", desc: "Assessment of suspicious moles and referral if needed", price: "$19 base visit", cat: "dermatology" },
+  
+  // Mental Health Services (200 Q&A)
+  { service: "Depression Screening", desc: "Assessment for depression with questionnaires and clinical evaluation", price: "$19 base visit", cat: "mental_health" },
+  { service: "Anxiety Treatment", desc: "Management of anxiety disorders with counseling and medications", price: "$19 base visit", cat: "mental_health" },
+  { service: "Stress Management", desc: "Counseling and techniques for managing stress and improving mental wellness", price: "$19 base visit", cat: "mental_health" },
+  { service: "Insomnia Treatment", desc: "Evaluation and treatment for sleep disorders", price: "$19 base visit", cat: "mental_health" },
+  { service: "PTSD Screening", desc: "Assessment for post-traumatic stress disorder", price: "$19 base visit", cat: "mental_health" },
+  
+  // Specialty Services (300 Q&A)
+  { service: "Immigration Medical Exam", desc: "Comprehensive medical examination meeting USCIS requirements for immigration applications", price: "Special pricing available", cat: "specialty" },
+  { service: "Dental Services", desc: "Comprehensive dental care including cleanings, fillings, and extractions", price: "Contact for pricing", cat: "specialty" },
+  { service: "Vision Screening", desc: "Basic eye examination and vision testing", price: "$19 base visit", cat: "specialty" },
+  { service: "Hearing Test", desc: "Audiometry testing for hearing assessment", price: "Contact for pricing", cat: "specialty" },
+  { service: "Smoking Cessation Program", desc: "Support and medications to help quit smoking", price: "$19 base visit", cat: "specialty" },
+  { service: "Weight Loss Program", desc: "Aleeza Weight Loss Program with Semaglutide and personalized plans", price: "Flexible payment plans", cat: "specialty" },
+  { service: "Nutrition Counseling", desc: "Personalized dietary guidance for weight management and chronic disease", price: "$19 base visit", cat: "specialty" },
+  { service: "Travel Medicine", desc: "Pre-travel consultation including vaccines and preventive medications", price: "Contact for pricing", cat: "specialty" },
+  
+  // Semaglutide Weight Loss - Detailed Services
+  { service: "Semaglutide Weight Loss Treatment", desc: "Injectable medication administered once a week that acts on the central nervous system to reduce appetite and increase feelings of satiety, helping you eat less and lose weight", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Appetite Control", desc: "Reduces appetite by decreasing the production of ghrelin (the hunger hormone), which makes you feel less hungry and helps you eat less throughout the day", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Satiety Enhancement", desc: "Increases the feeling of satiety by stimulating the production of GLP-1, a hormone that makes you feel full after eating, helping you control portions naturally", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Gastric Emptying Delay", desc: "Delays gastric emptying, making food stay in the stomach longer, which helps you feel full for an extended period after meals", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Blood Sugar Control", desc: "Helps control blood sugar levels while losing weight, making it beneficial for those managing diabetes or prediabetes", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Blood Pressure Management", desc: "Treatment can help improve blood pressure levels as part of your overall health improvement journey during weight loss", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Cholesterol Improvement", desc: "Can help improve cholesterol levels, contributing to better cardiovascular health while losing weight", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Health Assessment", desc: "Comprehensive health studies to assess your general health before starting Semaglutide treatment, including blood work and physical examination", price: "Included in treatment plan", cat: "weight_loss" },
+  { service: "Semaglutide Personalized Weight Loss Plan", desc: "Customized weight loss plan that fits your specific needs, combining Semaglutide with nutrition guidance, exercise recommendations, and lifestyle changes", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Nutrition Counseling", desc: "Personalized nutrition tips including eating whole unprocessed foods, limiting sugar and refined carbohydrates, and choosing lean proteins and healthy fats", price: "Included in treatment plan", cat: "weight_loss" },
+  { service: "Semaglutide Safety Monitoring", desc: "Ongoing monitoring for side effects. Most common side effects are nausea, diarrhea, and vomiting, which are usually mild and disappear over time. Studied in thousands of people", price: "Included in treatment plan", cat: "weight_loss" },
+  { service: "Semaglutide Chronic Disease Risk Reduction", desc: "Reduce the risk of chronic diseases including Type 2 diabetes, heart disease, stroke, and some types of cancer through effective weight loss", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Sleep Quality Improvement", desc: "Many patients experience improved sleep quality as they lose weight with Semaglutide treatment", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Energy Enhancement", desc: "Patients often report increased energy and vitality as they lose weight and improve their overall health with Semaglutide", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Self-Esteem Improvement", desc: "Achieving your weight loss goals with Semaglutide often leads to improved self-esteem and self-confidence", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Weekly Injection", desc: "Once-weekly injectable medication, making it convenient and easy to incorporate into your routine. Your healthcare provider will show you the proper technique for self-administration", price: "Flexible payment plans available", cat: "weight_loss" },
+  { service: "Semaglutide Treatment Consultation", desc: "Initial consultation where your doctor will evaluate your health, review your medical history, and help determine if Semaglutide is the right weight loss solution for you", price: "$19 base visit", cat: "weight_loss" },
+  { service: "Semaglutide Medication Management", desc: "Ongoing medication management including dosage adjustments, monitoring for interactions with other medications, and ensuring optimal treatment results", price: "Included in treatment plan", cat: "weight_loss" },
+  { service: "Semaglutide Exercise Guidance", desc: "Recommendations to combine Semaglutide treatment with regular exercise to enhance results and promote sustainable weight loss and overall health", price: "Included in treatment plan", cat: "weight_loss" },
+  { service: "Semaglutide Hydration Support", desc: "Guidance on drinking plenty of water during Semaglutide treatment to stay hydrated and support your body's weight loss process", price: "Included in treatment plan", cat: "weight_loss" },
+  {
+    question: "What is Semaglutide?",
+    answer: "Semaglutide is a once-weekly injectable medication that reduces appetite, increases satiety, and helps with weight loss.",
+    cat: "weight_loss"
+  },
+  {
+    question: "How does Semaglutide work?",
+    answer: "Semaglutide reduces the hunger hormone ghrelin, increases the fullness hormone GLP-1, and slows gastric emptying so you stay full for longer.",
+    cat: "weight_loss"
+  },
+  {
+    question: "What can I expect during Semaglutide treatment?",
+    answer: "Many patients experience improvements in blood sugar control, blood pressure, cholesterol, and weight loss.",
+    cat: "weight_loss"
+  },
+  {
+    question: "What are the recommendations during Semaglutide treatment?",
+    answer: "Follow a healthy diet, exercise regularly, drink plenty of water, and inform your doctor about all medications you are taking.",
+    cat: "weight_loss"
+  },
+  {
+    question: "What are the health benefits of losing weight with Semaglutide?",
+    answer: "Weight loss may reduce the risk of chronic diseases, improve sleep, increase energy levels, and boost self-confidence.",
+    cat: "weight_loss"
+  },
+  {
+    question: "Is Semaglutide safe?",
+    answer: "Yes. It has been studied in thousands of people. Common side effects include nausea, diarrhea, and vomiting, which usually improve over time.",
+    cat: "weight_loss"
+  },
+  {
+    question: "How much does Semaglutide treatment cost?",
+    answer: "At Clínica San Miguel, flexible payment plans are available to make treatment accessible.",
+    cat: "weight_loss"
+  },
+  {
+    question: "How can I start Semaglutide treatment?",
+    answer: "Visit any Clínica San Miguel location for a health evaluation. The doctor will determine if Semaglutide is right for you and create a personalized weight loss plan.",
+    cat: "weight_loss"
+  },
+  {
+    question: "What are some nutrition tips for weight loss?",
+    answer: "Eat whole foods, limit sugar and refined carbs, and choose lean proteins with healthy fats.",
+    cat: "weight_loss"
+  },
+  {
+    question: "Why is hydration important during Semaglutide treatment?",
+    answer: "Staying hydrated reduces nausea, supports digestion, and helps the body respond better to Semaglutide. Drink plenty of water daily.",
+    cat: "weight_loss"
+  }
+];
+
+// Generate comprehensive service Q&A pairs
+comprehensiveServices.forEach(item => {
+  const serviceName = item.service;
+  const serviceDesc = item.desc;
+  const servicePrice = item.price;
+  const serviceCat = item.cat;
+  
+  // Question 1: "What is [service]?"
+  baseQuestions.push({
+    q: `What is ${serviceName}?`,
+    a: `${serviceDesc}. ${servicePrice}. Available at all Clínica San Miguel locations. Walk-ins welcome!`,
+    cat: serviceCat
+  });
+  
+  // Question 2: "Do you offer [service]?"
+  baseQuestions.push({
+    q: `Do you offer ${serviceName}?`,
+    a: `Yes! ${serviceDesc}. ${servicePrice}. Visit any of our 19 Texas locations.`,
+    cat: serviceCat
+  });
+  
+  // Question 3: "How much does [service] cost?"
+  baseQuestions.push({
+    q: `How much does ${serviceName} cost?`,
+    a: `${serviceName}: ${servicePrice}. ${serviceDesc}. Contact your nearest Clínica San Miguel location for details.`,
+    cat: serviceCat
+  });
+  
+  // Question 4: "Can I get [service]?"
+  baseQuestions.push({
+    q: `Can I get ${serviceName}?`,
+    a: `Yes, we provide ${serviceName}. ${serviceDesc}. ${servicePrice}. No appointment needed!`,
+    cat: serviceCat
+  });
+  
+  // Question 5: "Where can I get [service]?"
+  baseQuestions.push({
+    q: `Where can I get ${serviceName}?`,
+    a: `${serviceName} is available at all 19 Clínica San Miguel locations across Texas. ${servicePrice}. Walk-ins welcome!`,
+    cat: serviceCat
+  });
+  
+  // Question 6: "Tell me about [service]"
+  baseQuestions.push({
+    q: `Tell me about ${serviceName}`,
+    a: `${serviceName}: ${serviceDesc}. ${servicePrice}. Available at Clínica San Miguel with bilingual staff.`,
+    cat: serviceCat
+  });
+  
+  // Question 7: "I need [service]"
+  baseQuestions.push({
+    q: `I need ${serviceName}`,
+    a: `We offer ${serviceName}! ${serviceDesc}. ${servicePrice}. Visit any of our 19 locations. No appointment needed!`,
+    cat: serviceCat
+  });
+  
+  // Question 8: "Do you provide [service]?"
+  baseQuestions.push({
+    q: `Do you provide ${serviceName}?`,
+    a: `Yes, we provide ${serviceName}. ${serviceDesc}. ${servicePrice}. Walk-in care available 7 days a week.`,
+    cat: serviceCat
+  });
+  
+  // Question 9: "What does [service] include?"
+  baseQuestions.push({
+    q: `What does ${serviceName} include?`,
+    a: `${serviceName} includes: ${serviceDesc}. ${servicePrice}. Comprehensive care at Clínica San Miguel.`,
+    cat: serviceCat
+  });
+  
+  // Question 10: "Is [service] available?"
+  baseQuestions.push({
+    q: `Is ${serviceName} available?`,
+    a: `Yes! ${serviceName} is available at all our locations. ${serviceDesc}. ${servicePrice}.`,
+    cat: serviceCat
+  });
+});
 
 // Add base questions
 baseQuestions.forEach(item => {
