@@ -15,47 +15,82 @@ const coreInfo = {
   mission: "Making healthcare a right, not a privilege"
 };
 
-// Categories with base questions
+// Categories with base questions from ACTUAL WEBSITE CONTENT
 const baseQuestions = [
-  // Pricing (200 questions)
-  { q: "What is the cost of a visit?", a: "A visit at Clinica San Miguel costs just $19, making quality healthcare accessible to everyone.", cat: "pricing" },
-  { q: "How much does it cost?", a: "Our visits cost just $19. This affordable price makes quality healthcare accessible regardless of insurance status.", cat: "pricing" },
-  { q: "Is it affordable?", a: "Yes! Our $19 visits are designed to be affordable for everyone, making healthcare accessible to all.", cat: "pricing" },
-  { q: "Do I need to pay upfront?", a: "Payment is typically collected at the time of service. Our $19 visit fee is very affordable.", cat: "pricing" },
+  // Pricing (200 questions) - FROM HOMEPAGE
+  { q: "What is the cost of a visit?", a: "A visit at Clinica San Miguel costs just $19, making quality healthcare accessible to everyone. No appointment needed, no insurance required.", cat: "pricing" },
+  { q: "How much does it cost?", a: "Our visits cost just $19. This affordable price makes quality healthcare accessible regardless of insurance status. We're here to help you feel your best, every step of the way.", cat: "pricing" },
+  { q: "Is it affordable?", a: "Yes! Our $19 visits are designed to be affordable for everyone. Affordable, compassionate care starts at just $19.", cat: "pricing" },
+  { q: "Do I need to pay upfront?", a: "Payment is typically collected at the time of service. Our $19 visit fee is very affordable and accessible to all.", cat: "pricing" },
+  { q: "What is your pricing?", a: "Quality Care for Just $19 at Clinica San Miguel. Affordable, compassionate care starts at just $19.", cat: "pricing" },
+  { q: "How much are your treatments?", a: "Discover our most popular treatments, starting at just $19, designed to keep you and your family healthy.", cat: "pricing" },
+  { q: "Are your services expensive?", a: "No! High costs shouldn't hold you back. Get $19 visits with no insurance needed. Affordable, trusted care for you and your family.", cat: "pricing" },
   
-  // Insurance (200 questions)
-  { q: "Do I need insurance?", a: "No, you don't need insurance to visit Clinica San Miguel. We provide affordable care starting at $19 without requiring insurance.", cat: "insurance" },
-  { q: "What if I don't have insurance?", a: "No problem! Our $19 visits don't require insurance, making healthcare accessible to everyone.", cat: "insurance" },
+  // Insurance (200 questions) - FROM HOMEPAGE
+  { q: "Do I need insurance?", a: "No, you don't need insurance! No appointment needed, no insurance required. We provide affordable care starting at just $19.", cat: "insurance" },
+  { q: "What if I don't have insurance?", a: "No problem! No insurance? Get $19 visits, no insurance needed. Our mission is to make health a right, not a privilege.", cat: "insurance" },
   { q: "Do you accept Medicaid?", a: "Please contact your nearest location to inquire about Medicaid. Our $19 visits make care affordable even without insurance.", cat: "insurance" },
   { q: "Do you accept Medicare?", a: "Please contact your nearest location to inquire about Medicare. Our affordable $19 visits are available to all patients.", cat: "insurance" },
+  { q: "Can I visit without insurance?", a: "Absolutely! No insurance required. Don't let healthcare worries hold you back - get $19 visits with no insurance needed.", cat: "insurance" },
+  { q: "What if I'm uninsured?", a: "We welcome uninsured patients! Our $19 visits are designed to make healthcare accessible to everyone, regardless of insurance status.", cat: "insurance" },
   
-  // Appointments (200 questions)
-  { q: "Do I need an appointment?", a: "No appointment is needed! Clinica San Miguel offers walk-in care, so you can visit us whenever it's convenient for you.", cat: "appointments" },
-  { q: "Can I walk in?", a: "Yes! We offer walk-in care with no appointment needed. Just come in when it's convenient for you.", cat: "appointments" },
-  { q: "How long is the wait?", a: "Wait times may vary as a walk-in clinic. We work to see patients as quickly as possible while providing quality care.", cat: "appointments" },
+  // Appointments (200 questions) - FROM HOMEPAGE
+  { q: "Do I need an appointment?", a: "No appointment needed! Clinica San Miguel offers walk-in care. Affordable, compassionate care starts at just $19 with no appointment needed.", cat: "appointments" },
+  { q: "Can I walk in?", a: "Yes! We offer walk-in care. No appointment needed, no insurance required. Just come in when it's convenient for you.", cat: "appointments" },
+  { q: "How long is the wait?", a: "Long waits? Not here! We offer walk-in care to see you quickly. Don't let long waits hold you back.", cat: "appointments" },
+  { q: "Do I need to schedule?", a: "No scheduling needed! Walk-in care available. No appointment needed, no insurance required.", cat: "appointments" },
+  { q: "Can I come without an appointment?", a: "Absolutely! Walk-in care is available. No appointment needed - we're here to help you feel your best, every step of the way.", cat: "appointments" },
   
-  // Locations (300 questions)
-  { q: "How many locations do you have?", a: "Clinica San Miguel has 17 locations across Texas, making quality healthcare accessible throughout the state.", cat: "locations" },
-  { q: "Where are you located?", a: "We have 17 locations across Texas, including Dallas, Houston, San Antonio, and other cities. Visit our website to find the nearest clinic.", cat: "locations" },
-  { q: "Do you have a Dallas location?", a: "Yes, we have locations in the Dallas area. Visit our website or contact us for specific addresses.", cat: "locations" },
-  { q: "Do you have a Houston location?", a: "Yes, we have locations in the Houston area. Visit our website or contact us for specific addresses.", cat: "locations" },
-  { q: "Do you have a San Antonio location?", a: "Yes, we have locations in the San Antonio area. Visit our website or contact us for specific addresses.", cat: "locations" },
+  // Locations (300 questions) - FROM HOMEPAGE & CONTACT PAGE
+  { q: "How many locations do you have?", a: "With 17 locations across Texas, quality care is always close by. Find Your Nearest Clinica San Miguel!", cat: "locations" },
+  { q: "Where are you located?", a: "We have 17 locations across Texas, including Dallas, Houston, and San Antonio. Use our map or filter by city to find the clinic that's right for you.", cat: "locations" },
+  { q: "Do you have a Dallas location?", a: "Yes, we have locations in Dallas. With 17 locations across Texas, quality care is always close by. Visit new.clinicsanmiguel.com/contact to find your nearest clinic.", cat: "locations" },
+  { q: "Do you have a Houston location?", a: "Yes, we have locations in Houston. See all 17 clinics on our website at new.clinicsanmiguel.com/contact.", cat: "locations" },
+  { q: "Do you have a San Antonio location?", a: "Yes, we have locations in San Antonio. Choose your preferred location at new.clinicsanmiguel.com/contact.", cat: "locations" },
+  { q: "How do I find a clinic near me?", a: "Find Your Nearest Clinica San Miguel! Use our map or filter by city at new.clinicsanmiguel.com/contact to find the clinic that's right for you.", cat: "locations" },
+  { q: "Where is the nearest clinic?", a: "With 17 locations across Texas, quality care is always close by. Visit our locations page to find your nearest clinic.", cat: "locations" },
   
-  // Services (1500 questions)
-  { q: "What services do you offer?", a: "We offer general health check-ups, screenings, preventive care, and various medical treatments starting at just $19.", cat: "services" },
-  { q: "Do you offer check-ups?", a: "Yes, we offer general health check-ups for just $19, including checking vitals and answering health questions.", cat: "services" },
-  { q: "Can I get a physical exam?", a: "Yes, we offer physical examinations starting at just $19.", cat: "services" },
-  { q: "Do you offer lab tests?", a: "Yes, we offer various lab tests and screenings as part of our comprehensive healthcare services.", cat: "services" },
-  { q: "Can I get vaccinations?", a: "Yes, we offer various vaccinations and immunizations. Contact your nearest location for specific vaccine availability.", cat: "services" },
+  // Services (1500 questions) - FROM HOMEPAGE & SERVICES PAGE
+  { q: "What services do you offer?", a: "Revitalize Your Well-being with Affordable, Trusted Care. Discover our most popular treatments, starting at just $19, designed to keep you and your family healthy. Explore All Services at new.clinicsanmiguel.com/services", cat: "services" },
+  { q: "Do you offer check-ups?", a: "Yes! General health check-ups: Stay on top of your health with routine visits for only $19. Our caring team checks your vitals, answers your questions, and helps you feel your best.", cat: "services" },
+  { q: "Can I get a physical exam?", a: "Yes, we offer physical examinations. Care that fits your needs - from check-ups to screenings, our services are designed to keep you healthy at an affordable price.", cat: "services" },
+  { q: "Do you offer lab tests?", a: "Yes, we offer screenings and lab tests. From check-ups to screenings, our services are designed to keep you healthy at an affordable price.", cat: "services" },
+  { q: "Can I get vaccinations?", a: "Yes, we offer various vaccinations and immunizations. Explore how we can support you and your family at new.clinicsanmiguel.com/services", cat: "services" },
+  { q: "What treatments do you provide?", a: "Discover our most popular treatments, starting at just $19, designed to keep you and your family healthy. Visit our services page to explore all options.", cat: "services" },
+  { q: "Do you offer preventive care?", a: "Yes! From check-ups to screenings, our services are designed to keep you healthy at an affordable price. Stay on top of your health with routine visits for only $19.", cat: "services" },
+  { q: "What kind of care do you provide?", a: "Care that fits your needs. From check-ups to screenings, our services are designed to keep you healthy at an affordable price. Explore how we can support you and your family.", cat: "services" },
   
-  // Staff (100 questions)
-  { q: "Do you have bilingual staff?", a: "Yes! Our bilingual team welcomes you like family and can assist you in both English and Spanish.", cat: "staff" },
-  { q: "Do you speak Spanish?", a: "Yes, our bilingual team can assist you in Spanish and English, ensuring clear communication.", cat: "staff" },
+  // Staff (100 questions) - FROM HOMEPAGE
+  { q: "Do you have bilingual staff?", a: "Yes! Our bilingual team welcomes you like family and can assist you in both English and Spanish. We're here to help you feel your best, every step of the way.", cat: "staff" },
+  { q: "Do you speak Spanish?", a: "Yes, our bilingual team can assist you in Spanish and English. Our bilingual team welcomes you like family.", cat: "staff" },
+  { q: "Can I get help in Spanish?", a: "Absolutely! Our bilingual team welcomes you like family. We proudly serve Texas communities, especially the Hispanic population.", cat: "staff" },
+  { q: "Do you have Spanish-speaking doctors?", a: "Yes, our bilingual team can assist you in both English and Spanish, ensuring clear communication and compassionate care.", cat: "staff" },
   
-  // About (200 questions)
-  { q: "What is your mission?", a: "Our mission is to make healthcare a right, not a privilege. We provide affordable, compassionate care to everyone, especially serving the Hispanic community in Texas.", cat: "about" },
-  { q: "Who do you serve?", a: "We serve everyone in Texas, with a special focus on the Hispanic community. We believe everyone deserves quality healthcare.", cat: "about" },
-  { q: "What makes you different?", a: "We offer affordable $19 visits, no insurance required, walk-in care, bilingual staff, and compassionate service. Healthcare should be accessible to all.", cat: "about" },
+  // About (200 questions) - FROM HOMEPAGE & ABOUT PAGE
+  { q: "What is your mission?", a: "Our Mission: We believe everyone deserves quality care. Proudly serving Texas communities, especially the Hispanic population, we provide affordable, compassionate healthcare starting at just $19—no insurance needed. Our mission is to make health a right, not a privilege, for every patient we welcome.", cat: "about" },
+  { q: "Who do you serve?", a: "We serve everyone in Texas, proudly serving Texas communities, especially the Hispanic population. We believe everyone deserves quality healthcare.", cat: "about" },
+  { q: "What makes you different?", a: "We offer affordable $19 visits, no insurance required, walk-in care, bilingual staff, and compassionate service. Don't let healthcare worries hold you back - our bilingual team welcomes you like family.", cat: "about" },
+  { q: "What is Clinica San Miguel about?", a: "At Clinica San Miguel, your health is our priority. We provide Quality Care for Just $19. Affordable, compassionate care with no appointment needed, no insurance required.", cat: "about" },
+  { q: "Why choose Clinica San Miguel?", a: "Choose us for $19 visits, no insurance needed, walk-in care, and our bilingual team that welcomes you like family. We're here to help you feel your best, every step of the way.", cat: "about" },
+  { q: "What do patients say about you?", a: "Real Stories from Our Patients: At Clinica San Miguel, your health is our priority. Hear from others who've found care and comfort with us.", cat: "about" },
+  { q: "Do you have patient testimonials?", a: "Yes! Real Stories from Our Patients show how we've helped others find care and comfort. At Clinica San Miguel, your health is our priority.", cat: "about" },
+  
+  // Career Page Questions
+  { q: "Are you hiring?", a: "Join Our Team! Thanks for your interest in job opportunities at Clinica San Miguel. Visit new.clinicsanmiguel.com/career for current opportunities.", cat: "career" },
+  { q: "Do you have job openings?", a: "Yes! We're always looking for compassionate healthcare professionals. Visit our career page at new.clinicsanmiguel.com/career for current opportunities.", cat: "career" },
+  { q: "How can I apply for a job?", a: "Thanks for your interest in job opportunities at Clinica San Miguel! Visit new.clinicsanmiguel.com/career to see current opportunities and apply.", cat: "career" },
+  { q: "What positions are available?", a: "Visit our career page at new.clinicsanmiguel.com/career to see current opportunities. Join Our Team at Clinica San Miguel!", cat: "career" },
+  
+  // Contact & Social Media
+  { q: "How can I contact you?", a: "Visit our contact page at new.clinicsanmiguel.com/contact to choose your preferred location. You can also find us on Facebook, Instagram, and YouTube.", cat: "contact" },
+  { q: "Do you have social media?", a: "Yes! Follow us on Facebook at facebook.com/clinicasanmigueltx, Instagram @san_miguel_clinic_, and YouTube. Stay connected with Clinica San Miguel!", cat: "contact" },
+  { q: "How do I reach a specific location?", a: "Visit new.clinicsanmiguel.com/contact and choose your preferred location from our 17 clinics across Texas.", cat: "contact" },
+  { q: "Can I join your newsletter?", a: "Yes! Join Our Newsletter to stay updated on health tips, special offers, and clinic news. Sign up at new.clinicsanmiguel.com", cat: "contact" },
+  
+  // FAQ from Homepage
+  { q: "Do you have FAQs?", a: "Yes! Frequently Asked Questions: Have questions about your visit? Need health tips? Explore our resources to feel prepared and supported.", cat: "general" },
+  { q: "Where can I find health tips?", a: "Explore our Frequently Asked Questions and resources at new.clinicsanmiguel.com. We're here to help you feel prepared and supported.", cat: "general" },
+  { q: "How can I prepare for my visit?", a: "Have questions about your visit? Explore our resources and FAQs to feel prepared and supported. No appointment needed - just walk in!", cat: "general" },
 ];
 
 // Add base questions
