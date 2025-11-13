@@ -5,14 +5,19 @@ const path = require('path');
 const qaDatabase = [];
 let idCounter = 1;
 
-// Core information about Clinica San Miguel
+// Core information about Clinica San Miguel - UPDATED WITH COMPLETE DATA
 const coreInfo = {
-  pricing: "$19 per visit",
-  locations: "17 locations across Texas including Dallas, Houston, and San Antonio",
+  pricing: "$19 consultation fee",
+  locations: "19 Convenient Locations across Texas",
+  cities: "Dallas, Fort Worth, Houston, Pasadena, Fresno, Farmers Branch, Arlington, San Antonio, Garland, Channelview, Nacogdoches, Blanco, Jefferson, River Oak, Hwy 6, SW Military, Veterans Memorial, Fondren",
   insurance: "No insurance required",
-  appointments: "Walk-in care, no appointment needed",
-  staff: "Bilingual team (English and Spanish)",
-  mission: "Making healthcare a right, not a privilege"
+  appointments: "Walk-in care, no appointment needed - Open 7 days a week",
+  staff: "Bilingual English and Spanish-speaking providers",
+  mission: "Making healthcare a right, not a privilege",
+  founded: "2015 as Alianza Medica Hispana, transformed into Clinica San Miguel",
+  ageRange: "Patients aged 5 and older",
+  facilities: "State-of-the-art facilities with latest technology",
+  procedures: "On-site: abscess drainage, EKGs, ultrasounds, bloodwork"
 };
 
 // Categories with base questions from ACTUAL WEBSITE CONTENT
@@ -91,6 +96,109 @@ const baseQuestions = [
   { q: "Do you have FAQs?", a: "Yes! Frequently Asked Questions: Have questions about your visit? Need health tips? Explore our resources to feel prepared and supported.", cat: "general" },
   { q: "Where can I find health tips?", a: "Explore our Frequently Asked Questions and resources at new.clinicsanmiguel.com. We're here to help you feel prepared and supported.", cat: "general" },
   { q: "How can I prepare for my visit?", a: "Have questions about your visit? Explore our resources and FAQs to feel prepared and supported. No appointment needed - just walk in!", cat: "general" },
+  
+  // COMPREHENSIVE CLINIC DATA - History & About
+  { q: "When was Clinica San Miguel founded?", a: "Our journey began in 2015 with the establishment of Alianza Medica Hispana, our very first location. Over the years, we've grown and transformed into Clinica San Miguel.", cat: "about" },
+  { q: "What was your original name?", a: "We originally started as Alianza Medica Hispana in 2015 before transforming into Clinica San Miguel, expanding our reach and enhancing our services.", cat: "about" },
+  { q: "How many locations do you really have?", a: "We have 19 Convenient Locations across Texas, including Dallas, Fort Worth, Houston, Pasadena, Fresno, Farmers Branch, Arlington, San Antonio, and more!", cat: "locations" },
+  { q: "What ages do you treat?", a: "We proudly serve patients aged 5 and older throughout Texas, offering comprehensive care for every member of your family.", cat: "general" },
+  { q: "Do you have modern facilities?", a: "Yes! Our state-of-the-art facilities are equipped with the latest technology and our dedicated physicians can perform on-site procedures such as abscess drainage, EKGs, ultrasounds, and bloodwork.", cat: "facilities" },
+  { q: "What on-site procedures do you offer?", a: "Our physicians can perform on-site: abscess drainage, electrocardiograms (EKGs), ultrasounds, and bloodwork. State-of-the-art facilities with latest technology!", cat: "services" },
+  
+  // Weight Loss / Semaglutide Program
+  { q: "Do you offer weight loss programs?", a: "Yes! Achieve your health goals with our Aleeza Weight Loss Program featuring personalized weight management plans, combining nutrition, exercise, and lifestyle changes with Semaglutide for sustainable results.", cat: "weight_loss" },
+  { q: "What is Semaglutide?", a: "Semaglutide is an injectable medication administered once a week. It acts on the central nervous system to reduce appetite and increase feelings of satiety, helping you eat less and lose weight.", cat: "weight_loss" },
+  { q: "How does Semaglutide work?", a: "Semaglutide works by: 1) Reducing appetite (decreases ghrelin hormone), 2) Increasing satiety (stimulates GLP-1), 3) Delaying gastric emptying to keep you full longer.", cat: "weight_loss" },
+  { q: "What are Semaglutide benefits?", a: "Benefits include: blood sugar control, improved blood pressure, better cholesterol, reduced risk of chronic diseases, improved sleep, increased energy, and improved self-esteem.", cat: "weight_loss" },
+  { q: "Is Semaglutide safe?", a: "Semaglutide has been studied in thousands of people. Most common side effects are nausea, diarrhea, and vomiting, which are usually mild and disappear over time.", cat: "weight_loss" },
+  { q: "How much does Semaglutide cost?", a: "At Clínica San Miguel, we offer flexible payment plans to make Semaglutide treatment accessible to everyone. Visit any location for personalized pricing.", cat: "weight_loss" },
+  { q: "How do I start Semaglutide?", a: "Simply visit any Clínica San Miguel location. We'll conduct health studies and create a personalized weight loss plan. Your doctor will evaluate if Semaglutide is right for you.", cat: "weight_loss" },
+  
+  // Wart Removal
+  { q: "Do you remove warts?", a: "Yes! Our skilled professionals provide safe and effective wart removal with cautery. Easy, fast, and no appointment needed!", cat: "wart_removal" },
+  { q: "What is wart cauterization?", a: "Wart cauterization uses an electrical device to burn and remove the wart from skin. It's quick, safe, and effective for warts of different sizes and locations.", cat: "wart_removal" },
+  { q: "How is wart removal done?", a: "Procedure: 1) Local anesthesia numbs the area, 2) Cauterizer burns the wart, 3) Area is cleaned and bandaged. Usually takes just a few minutes!", cat: "wart_removal" },
+  { q: "Is wart removal painful?", a: "Local anesthesia numbs the area, so the procedure is not painful. You may feel slight temporary discomfort. Most cases need only one session.", cat: "wart_removal" },
+  { q: "How to tell wart from mole?", a: "Warts are small bumps (brown, white, or pink). Moles are spots of different colors/sizes. Cancerous moles have: asymmetry, irregular edges, non-uniform color, diameter >6mm, changes in size/shape/color.", cat: "wart_removal" },
+  
+  // Blood Tests
+  { q: "Do you do blood tests?", a: "Yes! Comprehensive blood tests to assess your health profile, identify potential issues, and guide personalized wellness strategies. Results available in 24-48 hours.", cat: "blood_tests" },
+  { q: "What blood tests do you offer?", a: "We offer: glucose, hormones, electrolytes, proteins, blood culture, serological tests, CBC, kidney/liver function, lipid profile, thyroid tests, cancer markers, autoimmune tests, coagulation, blood typing, and drug testing.", cat: "blood_tests" },
+  { q: "How do I prepare for blood test?", a: "Generally no special preparation needed. Follow doctor's instructions on fasting/medications. Tell us about all medications, vitamins, and supplements you're taking.", cat: "blood_tests" },
+  { q: "How fast are blood test results?", a: "Blood test results are generally available within 24-48 hours. Your doctor will explain results and recommend next steps.", cat: "blood_tests" },
+  { q: "What is a CBC test?", a: "Complete Blood Count (CBC) measures red blood cells, white blood cells, platelets, and hemoglobin to evaluate overall health and detect various conditions.", cat: "blood_tests" },
+  { q: "Do you test cholesterol?", a: "Yes! Our lipid profile measures total cholesterol, HDL cholesterol, LDL cholesterol, and triglycerides for cardiovascular health assessment.", cat: "blood_tests" },
+  { q: "Do you test thyroid?", a: "Yes! Thyroid function tests measure TSH, T4, and T3 levels to evaluate thyroid health and diagnose thyroid disorders.", cat: "blood_tests" },
+  
+  // Seniors Care
+  { q: "Do you treat seniors?", a: "Yes! Tailored healthcare for seniors, prioritizing preventative care, chronic disease management, and promoting overall well-being in the golden years. Open 7 days a week!", cat: "seniors" },
+  { q: "What services for older adults?", a: "For seniors: preventive care, checkups, chronic disease management, flu/cold/infection treatment, laboratory tests (blood, urine), and imaging services.", cat: "seniors" },
+  { q: "Do seniors need appointments?", a: "No appointment needed for lab tests! Simply come during office hours. We're open 7 days a week as a walk-in clinic. For other services, call to schedule.", cat: "seniors" },
+  
+  // Children/Pediatric Care
+  { q: "Do you see kids?", a: "Yes! Compassionate child-friendly healthcare for children ages 5 and up, covering routine check-ups, vaccinations, and timely interventions for optimal development.", cat: "pediatrics" },
+  { q: "What pediatric services?", a: "For children 5+: school physicals, general checkups, flu/strep/allergy treatment, lab tests (blood, allergy, urine, X-ray), specialized care for asthma and seasonal viruses.", cat: "pediatrics" },
+  { q: "Do you do school physicals?", a: "Yes! Comprehensive school physicals to ensure your child is ready for the school year, covering essential health assessments and immunizations.", cat: "pediatrics" },
+  { q: "What if child has fever?", a: "If fever >102°F (39°C): give acetaminophen/ibuprofen, warm bath, or cold compresses. If fever persists or with difficulty breathing, seizures, or lethargy, seek immediate medical attention.", cat: "pediatrics" },
+  { q: "How prevent child flu?", a: "Best prevention: annual flu vaccination. Also: wash hands frequently, cover mouth/nose when coughing/sneezing, avoid contact with sick people.", cat: "pediatrics" },
+  { q: "Child allergy treatment?", a: "For child allergies: identify and avoid triggers. We provide medications to relieve symptoms and perform allergy testing to identify specific allergens.", cat: "pediatrics" },
+  { q: "Do you treat child asthma?", a: "Yes! Specialized care for childhood asthma including diagnosis, treatment plans, and ongoing management to keep your child healthy and active.", cat: "pediatrics" },
+  
+  // Ear Cleaning
+  { q: "Do you clean ears?", a: "Yes! Gentle and expert ear cleaning services to ensure clear hearing and prevent discomfort or complications related to earwax buildup.", cat: "ear_cleaning" },
+  { q: "Why is ear cleaning important?", a: "Ear washing removes accumulated wax and prevents: infections, wax plugs, and permanent hearing loss. Benefits: improved hearing, pain relief, reduced infection risk.", cat: "ear_cleaning" },
+  { q: "Is ear cleaning painful?", a: "Not usually painful, may cause slight temporary discomfort. Procedure takes just a few minutes using warm water and salt solution.", cat: "ear_cleaning" },
+  { q: "Ear cleaning contraindications?", a: "Cannot do ear washing if you have: eardrum perforation, acute otitis media, eardrums with ventilation tubes, or allergies to water/washing products.", cat: "ear_cleaning" },
+  
+  // Specialized Services
+  { q: "Do you do DOT exams?", a: "Yes! DOT exams for commercial drivers. Certified healthcare professionals assess drivers ensuring road safety and compliance. Includes DOT + Urine Test special!", cat: "dot_test" },
+  { q: "Do you treat thyroid?", a: "Yes! Specialized thyroid care including thorough evaluation, precise diagnosis, and personalized treatment plans for optimal thyroid health.", cat: "thyroid" },
+  { q: "High cholesterol treatment?", a: "Yes! Holistic management of high cholesterol and triglycerides through lifestyle modifications, medication, and ongoing monitoring for cardiovascular health.", cat: "cholesterol" },
+  { q: "Do you offer pregnancy care?", a: "Yes! Comprehensive pregnancy services including prenatal check-ups, ultrasound services, and expert guidance through your transformative journey.", cat: "pregnancy" },
+  { q: "Do you do PSA tests?", a: "Yes! Prostate-specific antigen (PSA) testing for early detection of prostate issues, ensuring proactive and effective management.", cat: "psa_test" },
+  { q: "Ingrown toenail removal?", a: "Yes! Swift and painless removal of ingrown toenails, addressing discomfort and preventing potential infections.", cat: "ingrown_toenail" },
+  { q: "Do you do EKGs?", a: "Yes! State-of-the-art electrocardiogram (EKG) services for accurate heart health assessments, aiding in diagnosis and management of cardiac conditions.", cat: "ekg" },
+  { q: "Do you have ultrasound?", a: "Yes! Cutting-edge ultrasound services for detailed imaging, assisting in diagnosis and monitoring of various medical conditions.", cat: "ultrasound" },
+  { q: "Do you do Pap smears?", a: "Yes! Regular Pap smears for early detection of cervical abnormalities, promoting women's reproductive health and preventing cervical cancer.", cat: "pap_smear" },
+  { q: "STD testing available?", a: "Yes! Confidential and comprehensive STD testing services, emphasizing early detection, treatment, and education for sexual health.", cat: "std_test" },
+  { q: "Do you give B-12 shots?", a: "Yes! Boost your energy levels and overall well-being with Vitamin B-12 supplementation, tailored to individual needs.", cat: "vitamin_b12" },
+  { q: "Do you treat diabetes?", a: "Yes! Comprehensive diabetes care including education, monitoring, and personalized management plans for a healthier and more active lifestyle.", cat: "diabetes" },
+  { q: "Do you drain abscesses?", a: "Yes! Swift and effective abscess drainage to relieve pain, prevent complications, and promote rapid healing. On-site procedure available.", cat: "abscess" },
+  { q: "High blood pressure treatment?", a: "Yes! Expert hypertension management, combining lifestyle modifications and medications for optimal blood pressure control.", cat: "hypertension" },
+  { q: "Do you offer primary care?", a: "Yes! Patient-centered primary care services offering comprehensive medical care, preventive measures, and ongoing support for your overall well-being.", cat: "primary_care" },
+  { q: "Do you have dental services?", a: "Yes! Expert dental care for healthy smiles. From routine cleanings to advanced procedures, our skilled dentists prioritize your oral health. We're hiring Dental Assistants!", cat: "dental" },
+  { q: "Immigration medical exams?", a: "Yes! Comprehensive immigration medical exams meeting immigration standards, conducted by certified professionals. Check our specials!", cat: "immigration" },
+  
+  // Location-Specific Phone Numbers
+  { q: "Fresno TX phone number?", a: "Clinica San Miguel Fresno, TX - Appointment: 346-423-2963. Walk-ins welcome!", cat: "locations" },
+  { q: "Garland location phone?", a: "Clinica San Miguel Garland - Appointment: 469-306-4101. Open 7 days a week!", cat: "locations" },
+  { q: "Fort Worth phone number?", a: "Clinica San Miguel Fort Worth, TX Office - Appointment: 817-813-9187. No appointment needed for walk-ins!", cat: "locations" },
+  { q: "Dallas NW phone?", a: "Clinica San Miguel Dallas NW - Appointment: 469-771-0829. Bilingual staff ready to help!", cat: "locations" },
+  { q: "Farmers Branch phone?", a: "Clinica San Miguel Farmers Branch - Appointment: 409-202-6338. State-of-the-art facility!", cat: "locations" },
+  { q: "Fondren location phone?", a: "Clinica San Miguel Fondren - Appointment: 832-720-7801. Comprehensive family healthcare!", cat: "locations" },
+  { q: "Channelview phone number?", a: "Clinica San Miguel Channelview - Appointment: 832-849-0946. $19 consultation fee!", cat: "locations" },
+  { q: "Nacogdoches phone?", a: "Clinica San Miguel Nacogdoches - Appointment: 210-934-3343. Walk-in clinic open 7 days!", cat: "locations" },
+  { q: "Blanco location phone?", a: "Clínica San Miguel Blanco - Appointment: 210-251-2809. Bilingual English and Spanish providers!", cat: "locations" },
+  { q: "Pasadena phone number?", a: "Clinica San Miguel Pasadena - Appointment: 346-423-3010. No insurance required!", cat: "locations" },
+  { q: "Houston office phone?", a: "Clinica San Miguel Houston, TX Office - Appointment: 832-415-3774. Comprehensive care for all ages 5+!", cat: "locations" },
+  { q: "Jefferson location phone?", a: "Clínica San Miguel Jefferson - Appointment: (469) 809-2047. Affordable healthcare for everyone!", cat: "locations" },
+  { q: "River Oak phone?", a: "Clinica San Miguel River Oak - Appointment: 682-267-8369. On-site EKGs, ultrasounds, bloodwork!", cat: "locations" },
+  { q: "Arlington phone number?", a: "Clinica San Miguel Arlington - Appointment: 682-327-1695. Serving diverse Texas communities!", cat: "locations" },
+  { q: "Hwy 6 location phone?", a: "Clinica San Miguel Hwy 6 - Appointment: 832-720-8915. Latest technology and expert care!", cat: "locations" },
+  { q: "SW Military phone?", a: "Clinica San Miguel SW Military - Appointment: 210-934-3346. Preventive care and chronic disease management!", cat: "locations" },
+  { q: "Veterans Memorial phone?", a: "Clinica San Miguel Veterans Memorial - Appointment: 346-423-3740. Quality care for seniors and families!", cat: "locations" },
+  
+  // Career Opportunities
+  { q: "Are you hiring?", a: "Yes! Join Our Team! Current opportunities: Dental Assistant, Primary Care Physician (MD), Medical Assistant, and Nurse. Thanks for your interest!", cat: "career" },
+  { q: "Need dental assistant?", a: "Yes! We're hiring Dental Assistants. Join our team serving diverse communities across 19 Texas locations. Apply today!", cat: "career" },
+  { q: "Hiring doctors?", a: "Yes! Seeking Primary Care Physicians (MD) - Doctor of Medicine. Join our bilingual team with state-of-the-art facilities!", cat: "career" },
+  { q: "Need medical assistants?", a: "Yes! Hiring Medical Assistants to join our compassionate healthcare team at 19 convenient locations across Texas!", cat: "career" },
+  { q: "Hiring nurses?", a: "Yes! Seeking Nurses to provide quality care to patients aged 5 and older. Join Clinica San Miguel today!", cat: "career" },
+  
+  // Specials
+  { q: "Do you have specials?", a: "Yes! Current specials: Consulta, Immigration Medical Exam, and D.O.T + Urine Test. Visit any of our 19 locations for details!", cat: "specials" },
+  { q: "Immigration exam special?", a: "Yes! Special pricing on Immigration Medical Exams. Comprehensive exams meeting immigration standards by certified professionals!", cat: "specials" },
+  { q: "DOT exam special price?", a: "Yes! D.O.T + Urine Test special available. Contact any of our 19 locations for current pricing. Walk-ins welcome!", cat: "specials" },
 ];
 
 // Add base questions
