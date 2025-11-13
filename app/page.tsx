@@ -36,13 +36,13 @@ export default function Home() {
         setQaData(data)
         
         // Initialize Fuse.js for fuzzy search
-        const fuseInstance = new Fuse(data, {
+        const fuseInstance = new Fuse<QA>(data, {
           keys: ['question', 'keywords', 'answer'],
           threshold: 0.4,
           includeScore: true,
           minMatchCharLength: 2,
         })
-        setFuse(fuseInstance)
+        setFuse(fuseInstance as Fuse<QA>)
       })
       .catch(err => console.error('Error loading Q&A data:', err))
 
